@@ -21,5 +21,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Vector runners (payload, identity, flag hashing) and integration tests
   against the spec's mock capture server.
 
-[Unreleased]: https://github.com/freshworkstudio/kilden-sdk-node/compare/v0.1.0-alpha.1...HEAD
-[0.1.0-alpha.1]: https://github.com/freshworkstudio/kilden-sdk-node/releases/tag/v0.1.0-alpha.1
+[Unreleased]: https://github.com/kildenhq/kilden-sdk-node/compare/v0.1.0-alpha.1...HEAD
+[0.1.0-alpha.1]: https://github.com/kildenhq/kilden-sdk-node/releases/tag/v0.1.0-alpha.1

@@ -13,10 +13,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/freshworkstudio/kilden-sdk-node.git"
+    "url": "git+https://github.com/kildenhq/kilden-sdk-node.git"
   },
-  "homepage": "https://github.com/freshworkstudio/kilden-sdk-node#readme",
-  "bugs": "https://github.com/freshworkstudio/kilden-sdk-node/issues",
+  "homepage": "https://github.com/kildenhq/kilden-sdk-node#readme",
+  "bugs": "https://github.com/kildenhq/kilden-sdk-node/issues",
   "type": "module",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",

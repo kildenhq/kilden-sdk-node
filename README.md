@@ -5,8 +5,8 @@
 # @kilden-io/node
 
 [![npm](https://img.shields.io/npm/v/@kilden-io/node)](https://www.npmjs.com/package/@kilden-io/node)
-[![ci](https://github.com/freshworkstudio/kilden-sdk-node/actions/workflows/ci.yml/badge.svg)](https://github.com/freshworkstudio/kilden-sdk-node/actions/workflows/ci.yml)
-[![license](https://img.shields.io/github/license/freshworkstudio/kilden-sdk-node)](LICENSE)
+[![ci](https://github.com/kildenhq/kilden-sdk-node/actions/workflows/ci.yml/badge.svg)](https://github.com/kildenhq/kilden-sdk-node/actions/workflows/ci.yml)
+[![license](https://img.shields.io/github/license/kildenhq/kilden-sdk-node)](LICENSE)
 
 [Kilden](https://kilden.io) is a customer data platform — product analytics,
 campaigns and session replay on one event pipeline. This is the **server-side**
@@ -137,7 +137,7 @@ new Client(secretKey, {
 ## Spec
 
 This SDK implements
-[kilden-sdk-spec](https://github.com/freshworkstudio/kilden-sdk-spec) v0.1 —
+[kilden-sdk-spec](https://github.com/kildenhq/kilden-sdk-spec) v0.1 —
 one spec and one frozen vector set shared by the PHP, Node, Python, Ruby and
 Go SDKs, enforced in CI against the spec's mock capture server. Behavior
 changes land in the spec first; see
@@ -146,7 +146,7 @@ changes land in the spec first; see
 ## Community
 
 Questions and design conversations:
-[Discussions](https://github.com/freshworkstudio/kilden-sdk-node/discussions).
+[Discussions](https://github.com/kildenhq/kilden-sdk-node/discussions).
 Product docs: [docs.kilden.io](https://docs.kilden.io).
 
 ## License

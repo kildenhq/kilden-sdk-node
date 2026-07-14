@@ -1,7 +1,7 @@
 # Contributing
 
 Behavior here is governed by
-[kilden-sdk-spec](https://github.com/freshworkstudio/kilden-sdk-spec): the
+[kilden-sdk-spec](https://github.com/kildenhq/kilden-sdk-spec): the
 spec document, the frozen test vectors and the mock capture server. A PR that
 changes observable behavior without a matching spec change will be rejected —
 five SDKs stay identical only if the spec moves first.
@@ -22,5 +22,5 @@ and a Go toolchain. `npm run test:unit` skips those.
 
 ## Questions
 
-[Discussions](https://github.com/freshworkstudio/kilden-sdk-node/discussions),
+[Discussions](https://github.com/kildenhq/kilden-sdk-node/discussions),
 please — answers there stay searchable.
