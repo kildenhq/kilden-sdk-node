@@ -30,20 +30,14 @@ jobs:
       - run: npm run check
         env:
           KILDEN_SPEC_DIR: ${{ github.workspace }}/spec
-      - name: publish
-        # Skips gracefully while the NPM_TOKEN secret does not exist yet —
-        # the GitHub release still happens; npm publish is manual until then
-        # (see RELEASE.md).
+      - name: publish (OIDC trusted publishing)
+        # No token: npmjs.com has this repo+workflow configured as the
+        # package's trusted publisher. Requires npm >= 11.5 for OIDC.
         run: |
-          if [ -z "$NODE_AUTH_TOKEN" ]; then
-            echo "NPM_TOKEN secret not configured; skipping npm publish"
-            exit 0
-          fi
+          npm install -g npm@latest
           TAG=latest
           case "$GITHUB_REF_NAME" in *-alpha*|*-beta*|*-rc*) TAG=alpha ;; esac
           npm publish --provenance --access public --tag "$TAG"
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: github release
         env:
           GH_TOKEN: ${{ github.token }}
