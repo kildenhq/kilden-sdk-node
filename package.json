@@ -1,6 +1,6 @@
 {
   "name": "@kilden-io/node",
-  "version": "0.1.0-alpha.1",
+  "version": "0.1.0-alpha.2",
   "description": "Kilden Node.js SDK — server-side events, identity signing and feature flags. Zero dependencies.",
   "keywords": [
     "kilden",
