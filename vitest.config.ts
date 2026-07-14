@@ -5,5 +5,8 @@ export default defineConfig({
     globalSetup: ["test/global-setup.ts"],
     testTimeout: 30_000,
     hookTimeout: 60_000,
+    // Integration tests share one mock server (reset/fail arming are global
+    // state): files must not run concurrently.
+    fileParallelism: false,
   },
 });
