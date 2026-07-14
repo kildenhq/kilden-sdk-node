@@ -147,7 +147,7 @@ changes land in the spec first; see
 
 Questions and design conversations:
 [Discussions](https://github.com/kildenhq/kilden-sdk-node/discussions).
-Product docs: [docs.kilden.io](https://docs.kilden.io).
+Product docs: [kilden.io/docs](https://kilden.io/docs).
 
 ## License
 
