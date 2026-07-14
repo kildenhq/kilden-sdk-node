@@ -21,7 +21,14 @@ jobs:
       - run: npm ci
       - run: npx tsc --noEmit && npx vitest run --exclude 'test/integration/**' test
       - name: publish
+        # Skips gracefully while the NPM_TOKEN secret does not exist yet —
+        # the GitHub release still happens; npm publish is manual until then
+        # (see RELEASE.md).
         run: |
+          if [ -z "$NODE_AUTH_TOKEN" ]; then
+            echo "NPM_TOKEN secret not configured; skipping npm publish"
+            exit 0
+          fi
           TAG=latest
           case "$GITHUB_REF_NAME" in *-alpha*|*-beta*|*-rc*) TAG=alpha ;; esac
           npm publish --provenance --access public --tag "$TAG"
