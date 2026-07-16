@@ -13,6 +13,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: tag matches package.json
+        # A unit test already ties src/version.ts (the SPEC §4.1 User-Agent)
+        # to package.json, so pinning package.json to the tag pins both. That
+        # last link was missing everywhere: kilden-sdk-php shipped two releases
+        # and kilden-sdk-go one, all declaring a stale version, because a tag
+        # bump with no version bump was nobody's error to catch.
+        run: |
+          tag="${GITHUB_REF_NAME#v}"
+          declared=$(jq -r .version package.json)
+          if [ "$tag" != "$declared" ]; then
+            echo "::error::tag $GITHUB_REF_NAME ships package.json version '$declared' — bump package.json and src/version.ts to '$tag'"
+            exit 1
+          fi
+          echo "package.json version '$declared' matches tag $GITHUB_REF_NAME"
       - uses: actions/checkout@v4
         with:
           repository: kildenhq/kilden-sdk-spec
